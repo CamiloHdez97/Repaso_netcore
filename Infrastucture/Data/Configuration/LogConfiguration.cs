@@ -1,4 +1,4 @@
-using Core.Estites;
+using Core.Estities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

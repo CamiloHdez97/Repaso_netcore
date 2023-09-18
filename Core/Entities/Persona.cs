@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Security.Cryptography.X509Certificates;
 
-namespace Core.Estites;
+namespace Core.Estities;
 
 public class Persona {
 

@@ -152,11 +152,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\Core\\Core.csproj",
+      "projectUniqueName": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "c:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\Core\\Core.csproj",
+      "projectPath": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\Camilo Hernandez\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\Core\\obj\\",
+      "outputPath": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Camilo Hernandez\\AppData\\Roaming\\NuGet\\NuGet.Config"

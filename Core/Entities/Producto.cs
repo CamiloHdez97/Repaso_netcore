@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Core.Estites;
+namespace Core.Estities;
 
 public class Producto {
 

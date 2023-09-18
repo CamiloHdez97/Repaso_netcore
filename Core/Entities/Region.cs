@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Net.NetworkInformation;
 
-namespace Core.Estites;
+namespace Core.Estities;
 
 public class Region {
 

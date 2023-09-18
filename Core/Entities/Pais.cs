@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.Contracts;
 
-namespace Core.Estites;
+namespace Core.Estities;
 
 public class Pais {
     [Key]

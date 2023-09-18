@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\Infrastucture\\Infrastucture.csproj": {}
+    "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\Infrastucture\\Infrastucture.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\Core\\Core.csproj": {
+    "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\Camilo Hernandez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\Core\\obj\\",
+        "outputPath": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Camilo Hernandez\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -63,14 +63,14 @@
         }
       }
     },
-    "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\Infrastucture\\Infrastucture.csproj": {
+    "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\Infrastucture\\Infrastucture.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\Infrastucture\\Infrastucture.csproj",
+        "projectUniqueName": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\Infrastucture\\Infrastucture.csproj",
         "projectName": "Infrastucture",
-        "projectPath": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\Infrastucture\\Infrastucture.csproj",
+        "projectPath": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\Infrastucture\\Infrastucture.csproj",
         "packagesPath": "C:\\Users\\Camilo Hernandez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\Infrastucture\\obj\\",
+        "outputPath": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\Infrastucture\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Camilo Hernandez\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -85,8 +85,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\Core\\Core.csproj"
+              "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\Core\\Core.csproj"
               }
             }
           }

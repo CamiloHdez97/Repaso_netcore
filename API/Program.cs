@@ -9,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.ConfigureCors();
 
 builder.Services.AddControllers();
+builder.Services.AddAplicationServices();
+
 builder.Services.AddDbContext<InventarioContext>(Options => {
     
     //Archivo de configuración

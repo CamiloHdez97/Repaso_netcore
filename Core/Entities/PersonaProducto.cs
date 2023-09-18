@@ -1,4 +1,4 @@
-namespace Core.Estites;
+namespace Core.Estities;
 
 public class PersonaProducto {
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e5rtYR4rdcNxfuAeBKvL/M5xxKyYkhVlnZhXE5gRTKG8QFXztMu7zUxOochZ9h7inRp1KtBzfVnzzzSPrM/S5w==",
+  "dgSpecHash": "GYELNYCcPB6SoBxiGFNEVRvQ8a78FlNm5LcBplCF9E73WHtGAxdJAHvr8isfIp5OdocbPflBK73ju7Cgk0dTCg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Camilo Hernandez\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
     "C:\\Users\\Camilo Hernandez\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",

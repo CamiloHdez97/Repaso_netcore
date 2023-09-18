@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\Core\\Core.csproj": {}
+    "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\Core\\Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\Core\\Core.csproj": {
+    "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\Camilo Hernandez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso\\Core\\obj\\",
+        "outputPath": "C:\\Users\\Camilo Hernandez\\Documents\\Netcore_basic\\Repaso_netcore\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Camilo Hernandez\\AppData\\Roaming\\NuGet\\NuGet.Config"

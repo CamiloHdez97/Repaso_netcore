@@ -1,5 +1,5 @@
 using System.IO.Compression;
-using Core.Estites;
+using Core.Estities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;

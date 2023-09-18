@@ -1,5 +1,5 @@
 using System.Reflection;
-using Core.Estites;
+using Core.Estities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
