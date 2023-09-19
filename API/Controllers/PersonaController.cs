@@ -27,6 +27,7 @@ public class PersonaController : BaseApiController{
     
     [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<Microsoft.AspNetCore.Mvc.ActionResult> Get(string id)
     {
@@ -47,5 +48,36 @@ public class PersonaController : BaseApiController{
             return BadRequest();
         } 
         return CreatedAtAction(nameof(Post), new {id = persona.IdPersona}, persona);
+    }
+
+    [HttpPut("{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<Persona>> Put(string id, [FromBody]Persona persona)
+    {
+        if(persona == null)
+            return NotFound();
+        unitOfWork.Personas.Update(persona);
+        await unitOfWork.SaveAsync();
+        return persona;
+
+    }
+
+    [HttpDelete("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> Delete(string id)
+    {
+        
+        var persona = await unitOfWork.Personas.GetByIdAsync(id);
+
+        if(persona == null)
+            return NotFound();
+
+        unitOfWork.Personas.Update(persona);
+        await unitOfWork.SaveAsync();
+        return NoContent();
+        
     }
 }

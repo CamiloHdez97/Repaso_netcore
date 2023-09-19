@@ -26,6 +26,7 @@ public class PersonaProductoController : BaseApiController{
     
     [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<Microsoft.AspNetCore.Mvc.ActionResult> Get(string id)
     {
@@ -46,5 +47,36 @@ public class PersonaProductoController : BaseApiController{
             return BadRequest();
         } 
         return CreatedAtAction(nameof(Post), new {id = personaProducto.IdPersona}, personaProducto);
+    }
+
+    [HttpPut("{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<PersonaProducto>> Put(string id, [FromBody]PersonaProducto personaProducto)
+    {
+        if(personaProducto == null)
+            return NotFound();
+        unitOfWork.PersonaProductos.Update(personaProducto);
+        await unitOfWork.SaveAsync();
+        return personaProducto;
+
+    }
+
+    [HttpDelete("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> Delete(string id)
+    {
+        
+        var personaProducto = await unitOfWork.PersonaProductos.GetByIdAsync(id);
+
+        if(personaProducto == null)
+            return NotFound();
+
+        unitOfWork.PersonaProductos.Update(personaProducto);
+        await unitOfWork.SaveAsync();
+        return NoContent();
+        
     }
 }

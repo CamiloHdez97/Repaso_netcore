@@ -26,6 +26,7 @@ public class ProductoController : BaseApiController{
     
     [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult> Get(string id)
     {
@@ -46,5 +47,36 @@ public class ProductoController : BaseApiController{
             return BadRequest();
         } 
         return CreatedAtAction(nameof(Post), new {id = producto.IdProducto}, producto);
+    }
+
+        [HttpPut("{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<Producto>> Put(string id, [FromBody]Producto producto)
+    {
+        if(producto == null)
+            return NotFound();
+        unitOfWork.Productos.Update(producto);
+        await unitOfWork.SaveAsync();
+        return producto;
+
+    }
+
+    [HttpDelete("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> Delete(string id)
+    {
+        
+        var producto = await unitOfWork.Productos.GetByIdAsync(id);
+
+        if(producto == null)
+            return NotFound();
+
+        unitOfWork.Productos.Update(producto);
+        await unitOfWork.SaveAsync();
+        return NoContent();
+        
     }
 }

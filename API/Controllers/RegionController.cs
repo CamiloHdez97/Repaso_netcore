@@ -26,6 +26,7 @@ public class RegionController : BaseApiController{
     
     [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult> Get(string id)
     {
@@ -46,5 +47,36 @@ public class RegionController : BaseApiController{
             return BadRequest();
         } 
         return CreatedAtAction(nameof(Post), new {id = region.CodRegion}, region);
+    }
+
+    [HttpPut("{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<Region>> Put(string id, [FromBody]Region region)
+    {
+        if(region == null)
+            return NotFound();
+        unitOfWork.Regiones.Update(region);
+        await unitOfWork.SaveAsync();
+        return region;
+
+    }
+
+    [HttpDelete("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> Delete(string id)
+    {
+        
+        var region = await unitOfWork.Regiones.GetByIdAsync(id);
+
+        if(region == null)
+            return NotFound();
+
+        unitOfWork.Regiones.Update(region);
+        await unitOfWork.SaveAsync();
+        return NoContent();
+        
     }
 }

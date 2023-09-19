@@ -27,6 +27,7 @@ public class PaisController : BaseApiController{
     
     [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult> Get(string id)
     {
@@ -47,6 +48,37 @@ public class PaisController : BaseApiController{
             return BadRequest();
         } 
         return CreatedAtAction(nameof(Post), new {id = pais.CodPais}, pais);
+    }
+    
+    [HttpPut("{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<Pais>> Put(string id, [FromBody]Pais pais)
+    {
+        if(pais == null)
+            return NotFound();
+        unitOfWork.Paises.Update(pais);
+        await unitOfWork.SaveAsync();
+        return pais;
+
+    }
+
+    [HttpDelete("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> Delete(string id)
+    {
+        
+        var pais = await unitOfWork.Paises.GetByIdAsync(id);
+
+        if(pais == null)
+            return NotFound();
+
+        unitOfWork.Paises.Update(pais);
+        await unitOfWork.SaveAsync();
+        return NoContent();
+        
     }
 
 
