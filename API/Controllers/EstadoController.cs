@@ -29,7 +29,7 @@ public class EstadoController : BaseApiController{
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<Microsoft.AspNetCore.Mvc.ActionResult> Get(string id)
+    public async Task<ActionResult> Get(string id)
     {
         var estado = await unitOfWork.Estados.GetByIdAsync(id); 
         return Ok(estado);

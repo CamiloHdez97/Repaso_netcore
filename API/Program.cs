@@ -3,9 +3,11 @@ using Infrastucture.Data;
 using Microsoft.EntityFrameworkCore;
 using API.Extensions;
 using Microsoft.AspNetCore.Cors.Infrastructure;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
 builder.Services.ConfigureCors();
 
 builder.Services.AddControllers();
